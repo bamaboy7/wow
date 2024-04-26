@@ -1,0 +1,15 @@
+clc
+close all
+clear all
+phi=0: .1:2*pi;
+c=3*(10^8);
+f=input('enter frequency of signal:');
+lambda=c/f;
+d=input('enter the distance between two antennas:');
+B=2*pi/lambda
+D=B*d
+alpha=input('give value of alpha:');
+n=input('enter no. of point sources:')
+si=abs(D*cos(phi)+D);
+Eo=abs((sin(n*si/2))./sin(si/2));
+polar(phi,Eo)
